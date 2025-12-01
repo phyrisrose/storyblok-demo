@@ -1,7 +1,9 @@
 import Counter from "@/components/Counter/Counter";
 import StoryblokContent from "@/components/StoryblokContent/StoryblokContent";
 import { Badge } from "@/components/ui/badge";
-import { Code2, Database, TestTube, Palette, Layout, Box } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Code2, Database, TestTube, Palette, Layout, Box, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const techStack = [
@@ -47,12 +49,27 @@ const Index = () => {
           <StoryblokContent />
         </div>
 
-        <footer className="mt-16 text-center space-y-4">
+        <footer className="mt-16 text-center space-y-6">
+          <div className="p-8 rounded-2xl border border-border bg-card/50 backdrop-blur-sm max-w-2xl mx-auto">
+            <Sparkles className="w-12 h-12 text-primary mx-auto mb-4" />
+            <h3 className="text-2xl font-bold mb-3">Explore Storyblok Components</h3>
+            <p className="text-muted-foreground mb-6">
+              Check out our pre-built design system components integrated with Storyblok CMS
+            </p>
+            <Button asChild size="lg" className="group">
+              <Link to="/storyblok-demo">
+                View Component Demo
+                <Sparkles className="ml-2 w-4 h-4 group-hover:rotate-12 transition-transform" />
+              </Link>
+            </Button>
+          </div>
+          
           <div className="flex flex-wrap justify-center gap-2">
             <Badge variant="secondary">Redux State</Badge>
             <Badge variant="secondary">React Query Cache</Badge>
             <Badge variant="secondary">SCSS Modules</Badge>
             <Badge variant="secondary">Vitest Ready</Badge>
+            <Badge variant="secondary">Storyblok CMS</Badge>
           </div>
           <p className="text-sm text-muted-foreground">
             Run <code className="px-2 py-1 bg-muted rounded font-mono text-xs">npm test</code> to execute unit tests
