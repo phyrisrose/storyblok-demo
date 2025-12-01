@@ -8,7 +8,7 @@ import Page from "@/components/Storyblok/Page";
 let storyblokApi: StoryblokClient | undefined;
 
 const initStoryblok = storyblokInit({
-  accessToken: "EWhSIOQutRNbSmf7z8hNrAt",
+  accessToken: import.meta.env.VITE_STORYBLOK_API_TOKEN,
   use: [apiPlugin],
   components: {
     hero: Hero,
