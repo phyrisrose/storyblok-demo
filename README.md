@@ -1,6 +1,6 @@
-# Modern Web App Scaffold
+# Storyblok demo
 
-A production-ready web application scaffold with modern tooling and best practices.
+A web application built using a modern web application stack, with a focus on testing out Storyblok CMS.
 
 ## Tech Stack
 
@@ -50,16 +50,19 @@ npm run dev
 ### Testing
 
 Run all tests:
+
 ```bash
 npm test
 ```
 
 Run tests in watch mode:
+
 ```bash
 npm run test:watch
 ```
 
 Run tests with UI:
+
 ```bash
 npm run test:ui
 ```
@@ -109,24 +112,28 @@ The Storyblok API key is already configured in `src/lib/storyblok.ts`. For produ
 ## Design System
 
 The project uses a modern design system with:
+
 - Cyan/blue gradient accents
 - Clean, tech-focused aesthetic
 - Smooth transitions and hover effects
 - Responsive design
 
 All design tokens are centralized in:
+
 - `src/index.css` - CSS variables
 - `tailwind.config.ts` - Tailwind configuration
 
 ## Testing Guidelines
 
 Write tests for:
+
 - Component rendering
 - User interactions
 - State changes
 - Data fetching
 
 Example test structure:
+
 ```typescript
 import { describe, it, expect } from "vitest";
 import { render } from "@testing-library/react";
