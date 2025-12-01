@@ -1,73 +1,178 @@
-# Welcome to your Lovable project
+# Modern Web App Scaffold
 
-## Project info
+A production-ready web application scaffold with modern tooling and best practices.
 
-**URL**: https://lovable.dev/projects/be357e90-3a12-42fa-b31f-228bb4f67b85
+## Tech Stack
 
-## How can I edit this code?
+- **Language**: TypeScript
+- **Framework**: React 18 + Vite
+- **State Management**: Redux Toolkit
+- **Data Fetching**: React Query (@tanstack/react-query)
+- **Styling**: Tailwind CSS + SCSS Modules
+- **UI Library**: Shadcn UI
+- **Testing**: Vitest + React Testing Library
+- **CMS**: Storyblok (integrated)
 
-There are several ways of editing your application.
+## Project Structure
 
-**Use Lovable**
+```
+src/
+├── components/          # React components
+│   ├── Counter/        # Example component with SCSS module
+│   ├── StoryblokContent/ # CMS integration example
+│   └── ui/             # Shadcn UI components
+├── store/              # Redux store configuration
+│   ├── index.ts        # Store setup
+│   ├── hooks.ts        # Typed Redux hooks
+│   └── slices/         # Redux slices
+├── lib/                # Utilities and configurations
+│   ├── storyblok.ts    # Storyblok CMS client
+│   └── utils.ts        # Helper functions
+├── test/               # Test configuration
+│   └── setup.ts        # Vitest setup
+└── pages/              # Page components
+```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/be357e90-3a12-42fa-b31f-228bb4f67b85) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+```bash
+npm install
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Development
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Testing
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Run all tests:
+```bash
+npm test
+```
 
-**Use GitHub Codespaces**
+Run tests in watch mode:
+```bash
+npm run test:watch
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Run tests with UI:
+```bash
+npm run test:ui
+```
 
-## What technologies are used for this project?
+### Build
 
-This project is built with:
+```bash
+npm run build
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Key Features
 
-## How can I deploy this project?
+### Redux Toolkit Integration
 
-Simply open [Lovable](https://lovable.dev/projects/be357e90-3a12-42fa-b31f-228bb4f67b85) and click on Share -> Publish.
+- Centralized state management
+- Type-safe hooks (`useAppDispatch`, `useAppSelector`)
+- Example counter slice with actions
 
-## Can I connect a custom domain to my Lovable project?
+### React Query
 
-Yes, you can!
+- Efficient data fetching and caching
+- Automatic background refetching
+- Integrated with Storyblok CMS
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### SCSS Modules
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Component-scoped styles
+- CSS Modules for style encapsulation
+- Works alongside Tailwind CSS
+
+### Vitest Testing
+
+- Fast unit testing with Vitest
+- React Testing Library integration
+- Example test suite for Counter component
+
+### Storyblok CMS
+
+- Headless CMS integration
+- Pre-configured API client
+- Example content fetching with React Query
+
+## Environment Configuration
+
+The Storyblok API key is already configured in `src/lib/storyblok.ts`. For production, consider moving it to environment variables.
+
+## Design System
+
+The project uses a modern design system with:
+- Cyan/blue gradient accents
+- Clean, tech-focused aesthetic
+- Smooth transitions and hover effects
+- Responsive design
+
+All design tokens are centralized in:
+- `src/index.css` - CSS variables
+- `tailwind.config.ts` - Tailwind configuration
+
+## Testing Guidelines
+
+Write tests for:
+- Component rendering
+- User interactions
+- State changes
+- Data fetching
+
+Example test structure:
+```typescript
+import { describe, it, expect } from "vitest";
+import { render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+
+describe("Component", () => {
+  it("should render correctly", () => {
+    // Test implementation
+  });
+});
+```
+
+## Best Practices
+
+1. **State Management**: Use Redux Toolkit for global state, React Query for server state
+2. **Styling**: Prefer design system tokens over arbitrary values
+3. **Components**: Keep components small and focused
+4. **Testing**: Write tests for critical user flows
+5. **Type Safety**: Leverage TypeScript for better DX
+
+## Scripts
+
+Add these scripts to your workflow:
+
+```json
+{
+  "test": "vitest",
+  "test:watch": "vitest --watch",
+  "test:ui": "vitest --ui"
+}
+```
+
+## Next Steps
+
+- [ ] Configure additional Storyblok components
+- [ ] Add more Redux slices for your domain
+- [ ] Implement authentication if needed
+- [ ] Set up CI/CD pipeline
+- [ ] Add E2E tests with Playwright/Cypress
+- [ ] Configure environment variables
+
+## Resources
+
+- [React Documentation](https://react.dev)
+- [Redux Toolkit](https://redux-toolkit.js.org)
+- [TanStack Query](https://tanstack.com/query)
+- [Vitest](https://vitest.dev)
+- [Storyblok](https://www.storyblok.com/docs)
+- [Shadcn UI](https://ui.shadcn.com)
