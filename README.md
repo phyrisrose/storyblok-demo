@@ -179,7 +179,20 @@ Note the difference between `components.json` and `storyblok-components.json`
 
 Storyblok is a component/block-based CMS. That means that components schemas are meant to be created in the Storyblok UI. Syncing with the design system components in React requires a manual step of syncing these schemas via storyblok-cli
 
-@todo add instructions
+You need to install storyblok-cli locally via npm, and then run push / pull commands to sync the schema. You can use an AI tool of your choice to convert the React UI component to Storyblok-formatted schema.
+
+```bash
+npx storyblok-cli pull-components --space SPACE_ID --region eu
+npx storyblok-cli push-components ./storyblok-components.json --space SPACE_ID
+```
+
+Running the CLI does require an auth step. If you've logged into Storyblok via GitHub SSO, you'd create a `~/.netrc` with the following
+
+```bash
+machine api.storyblok.com
+  login oauth
+  password MANAGEMENT_API_PERSONAL_ACCESS_TOKEN
+```
 
 ## Next Steps
 
