@@ -166,6 +166,21 @@ Add these scripts to your workflow:
 }
 ```
 
+## Caveats
+
+### Components?..
+
+Note the difference between `components.json` and `storyblok-components.json`
+
+- `components.json` → shadcn/ui config file (for your React UI library)
+- `storyblok-components.json` → Storyblok components schema
+
+### Storyblok schema
+
+Storyblok is a component/block-based CMS. That means that components schemas are meant to be created in the Storyblok UI. Syncing with the design system components in React requires a manual step of syncing these schemas via storyblok-cli
+
+@todo add instructions
+
 ## Next Steps
 
 - [ ] Configure additional Storyblok components
