@@ -1,0 +1,207 @@
+{
+  "components": [
+    {
+      "name": "page",
+      "display_name": "Page",
+      "is_root": true,
+      "is_nestable": false,
+      "schema": {
+        "body": {
+          "type": "bloks",
+          "display_name": "Body",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": ["hero", "product_section", "card", "footer", "grid"]
+        }
+      }
+    },
+    {
+      "name": "hero",
+      "display_name": "Hero Section",
+      "is_root": false,
+      "is_nestable": true,
+      "schema": {
+        "headline": {
+          "type": "text",
+          "display_name": "Headline",
+          "default_value": "Welcome to Our Platform"
+        },
+        "subheadline": {
+          "type": "textarea",
+          "display_name": "Subheadline",
+          "default_value": "Build amazing experiences with our design system"
+        },
+        "cta_text": {
+          "type": "text",
+          "display_name": "CTA Button Text"
+        },
+        "cta_link": {
+          "type": "multilink",
+          "display_name": "CTA Link"
+        },
+        "background_style": {
+          "type": "option",
+          "display_name": "Background Style",
+          "default_value": "gradient",
+          "options": [
+            { "name": "Gradient", "value": "gradient" },
+            { "name": "Solid", "value": "solid" },
+            { "name": "Subtle", "value": "subtle" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "product_section",
+      "display_name": "Product Section",
+      "is_root": false,
+      "is_nestable": true,
+      "schema": {
+        "title": {
+          "type": "text",
+          "display_name": "Section Title",
+          "default_value": "Our Products"
+        },
+        "description": {
+          "type": "textarea",
+          "display_name": "Section Description"
+        },
+        "products": {
+          "type": "bloks",
+          "display_name": "Products",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": ["card"]
+        }
+      }
+    },
+    {
+      "name": "card",
+      "display_name": "Card",
+      "is_root": false,
+      "is_nestable": true,
+      "schema": {
+        "title": {
+          "type": "text",
+          "display_name": "Card Title",
+          "default_value": "Card Title"
+        },
+        "description": {
+          "type": "textarea",
+          "display_name": "Description"
+        },
+        "badge": {
+          "type": "text",
+          "display_name": "Badge Text"
+        },
+        "featured": {
+          "type": "boolean",
+          "display_name": "Featured",
+          "default_value": false
+        },
+        "cta_text": {
+          "type": "text",
+          "display_name": "CTA Button Text"
+        },
+        "icon": {
+          "type": "text",
+          "display_name": "Icon Name (Lucide)"
+        }
+      }
+    },
+    {
+      "name": "footer",
+      "display_name": "Footer",
+      "is_root": false,
+      "is_nestable": true,
+      "schema": {
+        "company_name": {
+          "type": "text",
+          "display_name": "Company Name",
+          "default_value": "Company"
+        },
+        "tagline": {
+          "type": "textarea",
+          "display_name": "Tagline"
+        },
+        "copyright_text": {
+          "type": "text",
+          "display_name": "Copyright Text"
+        },
+        "show_social_links": {
+          "type": "boolean",
+          "display_name": "Show Social Links",
+          "default_value": true
+        },
+        "columns": {
+          "type": "bloks",
+          "display_name": "Footer Columns",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": ["footer_column"]
+        }
+      }
+    },
+    {
+      "name": "footer_column",
+      "display_name": "Footer Column",
+      "is_root": false,
+      "is_nestable": true,
+      "schema": {
+        "title": {
+          "type": "text",
+          "display_name": "Column Title"
+        },
+        "links": {
+          "type": "bloks",
+          "display_name": "Links",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": ["footer_link"]
+        }
+      }
+    },
+    {
+      "name": "footer_link",
+      "display_name": "Footer Link",
+      "is_root": false,
+      "is_nestable": true,
+      "schema": {
+        "label": {
+          "type": "text",
+          "display_name": "Link Label"
+        },
+        "url": {
+          "type": "multilink",
+          "display_name": "URL"
+        }
+      }
+    },
+    {
+      "name": "grid",
+      "display_name": "Grid Layout",
+      "is_root": false,
+      "is_nestable": true,
+      "schema": {
+        "columns": {
+          "type": "bloks",
+          "display_name": "Columns"
+        }
+      }
+    }
+  ],
+  "component_groups": [
+    {
+      "name": "Layout",
+      "components": ["page", "grid"]
+    },
+    {
+      "name": "Sections",
+      "components": ["hero", "product_section", "footer"]
+    },
+    {
+      "name": "Elements",
+      "components": ["card", "footer_column", "footer_link"]
+    }
+  ]
+}
