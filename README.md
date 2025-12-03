@@ -105,6 +105,7 @@ npm run build
 - Pre-configured API client
 - Example content fetching with React Query
 - Setup guide here https://www.storyblok.com/docs/guides/react/visual-preview
+- Example project https://github.com/storyblok/storyblok-demo-default-v2
 
 ## Environment Configuration
 
