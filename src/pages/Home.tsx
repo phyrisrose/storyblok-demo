@@ -1,7 +1,5 @@
 import { useStoryblok, StoryblokComponent, SbBlokData } from "@storyblok/react";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { AlertCircle } from "lucide-react";
 
 const Home = () => {
   // useStoryblok hook enables real-time visual editing in Storyblok
