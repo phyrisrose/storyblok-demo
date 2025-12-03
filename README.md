@@ -104,6 +104,7 @@ npm run build
 - Headless CMS integration
 - Pre-configured API client
 - Example content fetching with React Query
+- Setup guide here https://www.storyblok.com/docs/guides/react/visual-preview
 
 ## Environment Configuration
 
