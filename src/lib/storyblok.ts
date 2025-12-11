@@ -10,6 +10,7 @@ let storyblokApi: StoryblokClient | undefined;
 const initStoryblok = storyblokInit({
   accessToken: import.meta.env.VITE_STORYBLOK_API_TOKEN,
   use: [apiPlugin],
+  bridge: true, // Enable visual editor bridge
   components: {
     hero: Hero,
     product_section: ProductSection,
