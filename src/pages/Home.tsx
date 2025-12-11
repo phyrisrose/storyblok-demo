@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { useStoryblokBridge, StoryblokComponent, SbBlokData, ISbStoryData } from "@storyblok/react";
-import { storyblokApi } from "@/lib/storyblok";
+import { useStoryblokBridge, StoryblokComponent, SbBlokData, ISbStoryData, getStoryblokApi } from "@storyblok/react";
+import "@/lib/storyblok";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const Home = () => {
@@ -8,6 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchStory = async () => {
+      const storyblokApi = getStoryblokApi();
       if (!storyblokApi) return;
       const { data } = await storyblokApi.get("cdn/stories/home", {
         version: "draft",
