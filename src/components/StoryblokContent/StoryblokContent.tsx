@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { storyblokApi } from "@/lib/storyblok";
+import { getStoryblokApi } from "@storyblok/react";
+import "@/lib/storyblok";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { AlertCircle } from "lucide-react";
@@ -9,6 +10,7 @@ const StoryblokContent = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["storyblok"],
     queryFn: async () => {
+      const storyblokApi = getStoryblokApi();
       const response = await storyblokApi?.get("cdn/spaces/me");
       return response?.data;
     },

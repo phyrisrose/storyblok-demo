@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { storyblokApi } from "@/lib/storyblok";
-import { StoryblokComponent, SbBlokData } from "@storyblok/react";
+import { StoryblokComponent, SbBlokData, getStoryblokApi } from "@storyblok/react";
+import "@/lib/storyblok";
 import { Skeleton } from "@/components/ui/skeleton";
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -120,6 +120,7 @@ const StoryblokDemo = () => {
     queryFn: async () => {
       // Try to fetch from Storyblok, fallback to demo data
       try {
+        const storyblokApi = getStoryblokApi();
         const response = await storyblokApi?.get("cdn/stories/home", {
           version: "draft",
         });
