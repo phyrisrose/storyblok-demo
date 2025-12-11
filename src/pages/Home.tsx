@@ -1,9 +1,24 @@
-import { useStoryblok, StoryblokComponent, SbBlokData } from "@storyblok/react";
+import { useState, useEffect } from "react";
+import { useStoryblokBridge, StoryblokComponent, SbBlokData, ISbStoryData } from "@storyblok/react";
+import { storyblokApi } from "@/lib/storyblok";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const Home = () => {
-  // useStoryblok hook enables real-time visual editing in Storyblok
-  const story = useStoryblok("home", { version: "draft" });
+  const [story, setStory] = useState<ISbStoryData | null>(null);
+
+  useEffect(() => {
+    const fetchStory = async () => {
+      if (!storyblokApi) return;
+      const { data } = await storyblokApi.get("cdn/stories/home", {
+        version: "draft",
+      });
+      setStory(data.story);
+    };
+    fetchStory();
+  }, []);
+
+  // Enable visual editor bridge
+  useStoryblokBridge(story?.id ?? 0, (newStory) => setStory(newStory));
 
   if (!story || !story.content) {
     return (
