@@ -19,9 +19,9 @@ const StoryblokCard = ({ blok }: StoryblokCardProps) => {
   return (
     <Card
       {...storyblokEditable(blok)}
-      className="group hover:border-primary/50 transition-all hover:shadow-glow animate-fade-in"
+      className="group hover:border-primary/50 transition-all hover:shadow-glow animate-fade-in h-full flex flex-col"
     >
-      <CardHeader>
+      <CardHeader className="flex-1">
         <div className="flex items-start justify-between mb-2">
           {blok.featured && (
             <Badge variant="default" className="mb-2">
@@ -43,7 +43,7 @@ const StoryblokCard = ({ blok }: StoryblokCardProps) => {
         )}
       </CardHeader>
       {blok.cta_text && (
-        <CardContent>
+        <CardContent className="mt-auto pt-0">
           <Button
             variant="ghost"
             className="group/btn w-full justify-between"
