@@ -1,85 +1,34 @@
 {
   "components": [
     {
-      "name": "page",
-      "display_name": "Page",
-      "is_root": true,
-      "is_nestable": false,
+      "name": "Email",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-12-10T20:28:06.096Z",
+      "updated_at": "2025-12-10T20:29:20.879Z",
+      "id": 121687597458610,
       "schema": {
-        "body": {
-          "type": "bloks",
-          "display_name": "Body",
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "hero",
-            "product_section",
-            "card",
-            "footer",
-            "grid"
-          ]
+        "errorMessage": {
+          "type": "text",
+          "pos": 0,
+          "id": "3YatUSZiTqaP0CGS8gm_Eg"
         }
-      }
-    },
-    {
-      "name": "hero",
-      "display_name": "Hero Section",
+      },
+      "image": null,
+      "preview_field": null,
       "is_root": false,
+      "preview_tmpl": null,
       "is_nestable": true,
-      "schema": {
-        "headline": {
-          "type": "text",
-          "display_name": "Headline",
-          "default_value": "Welcome to Our Platform"
-        },
-        "subheadline": {
-          "type": "textarea",
-          "display_name": "Subheadline",
-          "default_value": "Build amazing experiences with our design system"
-        },
-        "cta_text": {
-          "type": "text",
-          "display_name": "CTA Button Text"
-        },
-        "cta_link": {
-          "type": "multilink",
-          "display_name": "CTA Link"
-        },
-        "background_style": {
-          "type": "option",
-          "display_name": "Background Style",
-          "default_value": "gradient",
-          "options": [
-            { "name": "Gradient", "value": "gradient" },
-            { "name": "Solid", "value": "solid" },
-            { "name": "Subtle", "value": "subtle" }
-          ]
-        }
-      }
-    },
-    {
-      "name": "product_section",
-      "display_name": "Product Section",
-      "is_root": false,
-      "is_nestable": true,
-      "schema": {
-        "title": {
-          "type": "text",
-          "display_name": "Section Title",
-          "default_value": "Our Products"
-        },
-        "description": {
-          "type": "textarea",
-          "display_name": "Section Description"
-        },
-        "products": {
-          "type": "bloks",
-          "display_name": "Products",
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": ["card"]
-        }
-      }
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Email",
+      "component_group_uuid": "4611645b-47b7-4ca1-968d-fb14fe330cc3",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "card",
@@ -144,67 +93,129 @@
           "display_name": "Footer Columns",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["footer_column"]
+          "component_whitelist": [
+            "footer_column"
+          ]
         }
       }
     },
     {
       "name": "footer_column",
       "display_name": "Footer Column",
-      "is_root": false,
-      "is_nestable": true,
+      "description": null,
+      "created_at": "2025-12-02T18:04:08.427Z",
+      "updated_at": "2025-12-02T18:04:08.427Z",
+      "id": 118821062363532,
       "schema": {
         "title": {
           "type": "text",
-          "display_name": "Column Title"
+          "display_name": "Column Title",
+          "id": "s2bktIceQrC5EzZHd6Xnxw"
         },
         "links": {
           "type": "bloks",
           "display_name": "Links",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["footer_link"]
+          "component_whitelist": [
+            "footer_link"
+          ],
+          "id": "RVNauk6VQ6Wr9ISyK_5Nvg"
         }
-      }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Footer Column",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "footer_link",
       "display_name": "Footer Link",
-      "is_root": false,
-      "is_nestable": true,
+      "description": null,
+      "created_at": "2025-12-02T18:04:08.409Z",
+      "updated_at": "2025-12-02T18:04:08.409Z",
+      "id": 118821062293897,
       "schema": {
         "label": {
           "type": "text",
-          "display_name": "Link Label"
+          "display_name": "Link Label",
+          "id": "wQflf8LyQPWmpdgQWXwcVA"
         },
         "url": {
           "type": "multilink",
-          "display_name": "URL"
+          "display_name": "URL",
+          "id": "jU2jth8KSbmD79RpNXPUvw"
         }
-      }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Footer Link",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "form_section",
+      "display_name": "Form Section",
+      "description": "",
+      "created_at": "2025-12-09T21:22:38.598Z",
+      "updated_at": "2025-12-10T21:48:18.214Z",
+      "id": 121347107221593,
+      "schema": {
+        "form_input": {
+          "type": "text",
+          "pos": 0,
+          "id": "PAWz-rxWQ7-bE8JsewfqKA",
+          "max_length": 11
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Form Section",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "grid",
       "display_name": "Grid Layout",
-      "is_root": false,
-      "is_nestable": true,
-      "schema": {
-        "columns": {
-          "type": "bloks",
-          "display_name": "Columns"
-        }
-      }
-    },
-    {
-      "name": "grid",
-      "display_name": null,
       "description": null,
       "created_at": "2025-12-01T21:55:29.831Z",
-      "updated_at": "2025-12-01T21:55:29.831Z",
+      "updated_at": "2025-12-02T18:04:08.414Z",
       "id": 118524026193798,
       "schema": {
         "columns": {
           "type": "bloks",
+          "display_name": "Columns",
           "id": "6-HH3nDARQK0rlhdiy1yQw"
         }
       },
@@ -215,7 +226,74 @@
       "is_nestable": true,
       "all_presets": [],
       "preset_id": null,
-      "real_name": "grid",
+      "real_name": "Grid Layout",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "hero",
+      "display_name": "Hero Section",
+      "description": null,
+      "created_at": "2025-12-02T18:04:08.413Z",
+      "updated_at": "2025-12-02T18:04:08.413Z",
+      "id": 118821062306187,
+      "schema": {
+        "headline": {
+          "type": "text",
+          "display_name": "Headline",
+          "default_value": "Welcome to Our Platform",
+          "id": "M4Jtkhy-TTiG9zdK0q-Igw"
+        },
+        "subheadline": {
+          "type": "textarea",
+          "display_name": "Subheadline",
+          "default_value": "Build amazing experiences with our design system",
+          "id": "K96t66PxRgSIGDXgyNkvJA"
+        },
+        "cta_text": {
+          "type": "text",
+          "display_name": "CTA Button Text",
+          "id": "DVSpF-GWQ_OjvMPCO72POg"
+        },
+        "cta_link": {
+          "type": "multilink",
+          "display_name": "CTA Link",
+          "id": "8RaqJExOTw2cHECVdfW9zg"
+        },
+        "background_style": {
+          "type": "option",
+          "display_name": "Background Style",
+          "default_value": "gradient",
+          "options": [
+            {
+              "name": "Gradient",
+              "value": "gradient"
+            },
+            {
+              "name": "Solid",
+              "value": "solid"
+            },
+            {
+              "name": "Subtle",
+              "value": "subtle"
+            }
+          ],
+          "id": "tVCoBAMxToWtrHsgkb3FVQ"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Hero Section",
       "component_group_uuid": null,
       "color": null,
       "icon": null,
@@ -226,10 +304,10 @@
     },
     {
       "name": "page",
-      "display_name": null,
-      "description": null,
+      "display_name": "home page",
+      "description": "the demo home page made of blocks",
       "created_at": "2025-12-01T21:55:29.805Z",
-      "updated_at": "2025-12-01T21:55:29.805Z",
+      "updated_at": "2025-12-05T19:58:09.242Z",
       "id": 118524026087300,
       "schema": {
         "body": {
@@ -244,7 +322,53 @@
       "is_nestable": false,
       "all_presets": [],
       "preset_id": null,
-      "real_name": "page",
+      "real_name": "home page",
+      "component_group_uuid": null,
+      "color": "var(--sb-color-accent-background-lavender)",
+      "icon": "layout-panel-top",
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "product_section",
+      "display_name": "Product Section",
+      "description": null,
+      "created_at": "2025-12-02T18:04:08.412Z",
+      "updated_at": "2025-12-02T18:04:08.412Z",
+      "id": 118821062302090,
+      "schema": {
+        "title": {
+          "type": "text",
+          "display_name": "Section Title",
+          "default_value": "Our Products",
+          "id": "RC08-aRvQ6aNSIKurxkbaA"
+        },
+        "description": {
+          "type": "textarea",
+          "display_name": "Section Description",
+          "id": "bHEj_Ck1Rs2qUgY9_T4Lhw"
+        },
+        "products": {
+          "type": "bloks",
+          "display_name": "Products",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "card"
+          ],
+          "id": "EtvgeiMcRw2umGZT96dG6Q"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Product Section",
       "component_group_uuid": null,
       "color": null,
       "icon": null,
@@ -257,15 +381,33 @@
   "component_groups": [
     {
       "name": "Layout",
-      "components": ["page", "grid"]
+      "components": [
+        "page",
+        "grid"
+      ]
     },
     {
       "name": "Sections",
-      "components": ["hero", "product_section", "footer"]
+      "components": [
+        "hero",
+        "product_section",
+        "footer"
+      ]
     },
     {
       "name": "Elements",
-      "components": ["card", "footer_column", "footer_link"]
+      "components": [
+        "card",
+        "footer_column",
+        "footer_link"
+      ]
+    },
+    {
+      "id": 121693769016103,
+      "name": "Validators",
+      "uuid": "4611645b-47b7-4ca1-968d-fb14fe330cc3",
+      "parent_id": null,
+      "parent_uuid": null
     }
   ]
 }
